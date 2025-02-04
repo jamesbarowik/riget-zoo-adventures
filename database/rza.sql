@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 04, 2025 at 10:56 AM
+-- Generation Time: Feb 04, 2025 at 11:39 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -86,7 +86,7 @@ CREATE TABLE `staying_in` (
 CREATE TABLE `tickets` (
   `ticket_id` int(11) NOT NULL,
   `type` int(11) NOT NULL,
-  `price` int(11) NOT NULL,
+  `price` float NOT NULL,
   `no_of_tickets` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -126,7 +126,7 @@ CREATE TABLE `users` (
 CREATE TABLE `user_type` (
   `user_type_id` int(11) NOT NULL,
   `group` text NOT NULL,
-  `discount` int(11) NOT NULL
+  `discount` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
