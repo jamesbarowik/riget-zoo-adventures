@@ -44,5 +44,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <br><br>
     <input class="submit" type="submit" value="Log In">
 </form>
-<p>Penis</p>
 </body>

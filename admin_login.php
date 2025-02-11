@@ -2,6 +2,8 @@
 // Connects the database
 require 'server/db_connect.php';
 
+session_start();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -14,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     password_verify($_POST["password"], $result["password"]); // verifies the password is matched
 
-    $_SESSION["admin_ssnlogin"] = true;  // sets up the session variables
+    $_SESSION["admin_cookie"] = true;  // sets up the session variables
     $_SESSION["email"] = $_POST['email'];
     $_SESSION["group"] = $result["group"];
 //    auditor($_POST['username'],"login", "Logged into the system");

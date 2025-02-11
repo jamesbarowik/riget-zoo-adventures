@@ -11,7 +11,7 @@ if (root_checker()){
     $last_name = $_POST['last_name'];
     $email = $_POST['email'];
     $hash_password = password_hash($password = $_POST['password'], PASSWORD_DEFAULT);
-    $group = "root";
+    $group = "ROOT";
     $sign_up_date = time();
 
     $sql = "INSERT INTO admins (first_name, last_name, email, password, `group`, sign_up_date) VALUES (?, ?, ?, ?, ?, ?)";

@@ -11,3 +11,24 @@ function root_checker(){
         return false;
     }
 }
+
+function check_root_group(){
+    if (!isset($_SESSION['ssnlogin']) || !isset($_COOKIE['cookies_and_cream']) || $_SESSION['group'] !== 'ROOT') {
+        header("Location: ../index.php?error=cookie_error");
+        exit();
+    }
+}
+
+function check_admin_group(){
+    if (!isset($_SESSION['ssnlogin']) || !isset($_COOKIE['cookies_and_cream']) || $_SESSION['group'] !== 'ADMIN') {
+        header("Location: ../index.php?error=cookie_error");
+        exit();
+    }
+}
+
+function check_manager_group(){
+    if (!isset($_SESSION['ssnlogin']) || !isset($_COOKIE['cookies_and_cream']) || $_SESSION['group'] !== 'MANAGER') {
+        header("Location: ../index.php?error=cookie_error");
+        exit();
+    }
+}
