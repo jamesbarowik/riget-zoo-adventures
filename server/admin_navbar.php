@@ -12,24 +12,22 @@ if (empty($_SESSION["admin_cookie"])) {
 } elseif ($_SESSION["admin_cookie"]) {
     // If the session variable "group" is equal to root
     if ($_SESSION["group"]=="ROOT") {
-        echo "::";
         echo "<a href='admin_pages/add_admin.php' <li> Create Admin Users </li></a>";
-        echo "::";
+        echo "|";
     // If the session variable "group" is equal to Root or Manager
     }if ($_SESSION["group"]=="ROOT" or $_SESSION["group"]=="MANAGER"){
-        echo "<a href='admin_pages/add_admin.php' <li> Add Ticket </li></a>";
-        echo "::";
+        echo "<a href='admin_pages/add_ticket.php' <li> Add Ticket </li></a>";
+        echo "|";
         echo "<a href='admin_pages/add_hotelroom.php' <li> Add Hotel Room </li></a>";
-        echo "::";
+        echo "|";
         echo "<a href='admin_pages/add_usertype.php' <li> Add User Type </li></a>";
-        echo "::";
+        echo "|";
     // If the session variable "group" is equal to Root or Manager or Admin
     }if ($_SESSION["group"]=="ROOT" or $_SESSION["group"]=="MANAGER" or $_SESSION["group"]=="ADMIN"){
         echo "<a href='admin_pages/add_ticket.php' <li> Update Ticket </li></a>";
-        echo "::";
+        echo "|";
         echo "<a href='admin_pages/add_hotelroom.php' <li> Update Hotel Room </li></a>";
-        echo "::";
+        echo "|";
         echo "<a href='admin_pages/add_usertype.php' <li> Update User Type </li></a>";
-        echo "::";
     }
 }?>
