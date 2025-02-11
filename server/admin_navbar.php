@@ -18,9 +18,9 @@ if (empty($_SESSION["admin_cookie"])) {
     }if ($_SESSION["group"]=="ROOT" or $_SESSION["group"]=="MANAGER"){
         echo "<a href='admin_pages/add_ticket.php' <li> Add Ticket </li></a>";
         echo "|";
-        echo "<a href='admin_pages/add_hotelroom.php' <li> Add Hotel Room </li></a>";
+        echo "<a href='admin_pages/add_hotel_room.php' <li> Add Hotel Room </li></a>";
         echo "|";
-        echo "<a href='admin_pages/add_usertype.php' <li> Add User Type </li></a>";
+        echo "<a href='admin_pages/add_user_type.php' <li> Add User Type </li></a>";
         echo "|";
     // If the session variable "group" is equal to Root or Manager or Admin
     }if ($_SESSION["group"]=="ROOT" or $_SESSION["group"]=="MANAGER" or $_SESSION["group"]=="ADMIN"){
