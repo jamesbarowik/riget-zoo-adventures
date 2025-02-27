@@ -1,6 +1,6 @@
 <?php
 // Use the pre-made database connection
-//require 'server/db_connect.php';
+require 'server/db_connect.php';
 require 'server/functions.php';
 
 if (root_checker()){
